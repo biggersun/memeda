@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>柠檬天使</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta content="telephone=no" name="format-detection">
@@ -13,22 +13,27 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <video
-        id="my-player"
-        class="video-js"
-        controls
-        preload="auto"
-        loop
-        poster="http://vjs.zencdn.net/v/oceans.png"
-        data-setup='{}'>
-        <source src="./common/video/bg.mp4" type="video/mp4"></source>
-        <p class="vjs-no-js">
-        要查看此视频，请启用JavaScript，并考虑升级浏览器
-        <a href="http://videojs.com/html5-video-support/" target="_blank">
-        支持 HTML5 video
-        </a>
-    </p>
-    </video>
+    <section class="container">
+        <div class="vedio-container">
+             <video
+                id="my-player"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="http://vjs.zencdn.net/v/oceans.png"
+                data-setup='{}'>
+                <source src="./common/video/bg.mp4" type="video/mp4"></source>
+                <p class="vjs-no-js">
+                要查看此视频，请启用JavaScript，并考虑升级浏览器
+                <a href="http://videojs.com/html5-video-support/" target="_blank">
+                支持 HTML5 video
+                </a>
+            </p>
+            </video>
+        </div>
+        <div class="rabbit"></div>
+    </section>
+
 </body>
 <script src="http://vjs.zencdn.net/5.11/video.min.js"></script>
 <script>
@@ -44,7 +49,7 @@
         },
         source: [
             {
-                src: './common/video/bg.mp4',
+                src: 'http://182.92.2.176:8080/muying/audio/muying01.mp4',
                 type: 'video/mp4'
             }
         ]
@@ -54,7 +59,7 @@
         videojs.log('Your player is ready!');
 
         // In this context, `this` is the player that was created by Video.js.
-        this.play();
+        // this.play();
 
         // How about an event listener?
         this.on('ended', function() {

@@ -1,9 +1,32 @@
 html,body{
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100%;
+    background-color: #FCE0E2;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #my-player{
-    width: 100%;
-    height: 4rem;
+    width: 5.66rem;
+    height: 4.26rem;
+    margin-top: 1rem;
+}
+
+.rabbit{
+    width: 4.06rem;
+    height: 4.97rem;
+    background: url('./common/images/video_img_Rabbit.png') no-repeat;
+    background-size: 100% 100%;
 }
